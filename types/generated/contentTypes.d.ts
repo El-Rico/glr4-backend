@@ -429,12 +429,18 @@ export interface ApiLessonLesson extends Schema.CollectionType {
     singularName: 'lesson';
     pluralName: 'lessons';
     displayName: 'lesson';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     date: Attribute.DateTime;
+    users_permissions_users: Attribute.Relation<
+      'api::lesson.lesson',
+      'manyToMany',
+      'plugin::users-permissions.user'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -818,6 +824,11 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
     firstname: Attribute.String;
     lastname: Attribute.String;
     student: Attribute.Boolean & Attribute.DefaultTo<true>;
+    lessons: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'manyToMany',
+      'api::lesson.lesson'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

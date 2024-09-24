@@ -78,6 +78,12 @@
     "student": {
       "type": "boolean",
       "default": true
+    },
+    "lessons": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lesson.lesson",
+      "mappedBy": "users_permissions_users"
     }
   }
 }
