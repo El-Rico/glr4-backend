@@ -20,6 +20,9 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "lessons"
+    },
+    "datename": {
+      "type": "string"
     }
   }
 }

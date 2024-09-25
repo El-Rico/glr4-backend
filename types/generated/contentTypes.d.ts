@@ -441,6 +441,7 @@ export interface ApiLessonLesson extends Schema.CollectionType {
       'manyToMany',
       'plugin::users-permissions.user'
     >;
+    datename: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
