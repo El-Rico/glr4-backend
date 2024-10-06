@@ -442,6 +442,8 @@ export interface ApiLessonLesson extends Schema.CollectionType {
       'plugin::users-permissions.user'
     >;
     datename: Attribute.String;
+    capacity: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<6>;
+    attending: Attribute.Integer & Attribute.DefaultTo<0>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

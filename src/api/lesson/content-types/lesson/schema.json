@@ -23,6 +23,15 @@
     },
     "datename": {
       "type": "string"
+    },
+    "capacity": {
+      "type": "integer",
+      "required": true,
+      "default": 6
+    },
+    "attending": {
+      "type": "integer",
+      "default": 0
     }
   }
 }
