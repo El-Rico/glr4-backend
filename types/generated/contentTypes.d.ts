@@ -368,12 +368,18 @@ export interface ApiClassClass extends Schema.CollectionType {
     singularName: 'class';
     pluralName: 'classes';
     displayName: 'class';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     title: Attribute.String;
+    users_permissions_users: Attribute.Relation<
+      'api::class.class',
+      'oneToMany',
+      'plugin::users-permissions.user'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -443,7 +449,6 @@ export interface ApiLessonLesson extends Schema.CollectionType {
     >;
     datename: Attribute.String;
     capacity: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<6>;
-    attending: Attribute.Integer & Attribute.DefaultTo<0>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

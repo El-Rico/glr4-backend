@@ -4,7 +4,8 @@
   "info": {
     "singularName": "class",
     "pluralName": "classes",
-    "displayName": "class"
+    "displayName": "class",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,11 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
     }
   }
 }
