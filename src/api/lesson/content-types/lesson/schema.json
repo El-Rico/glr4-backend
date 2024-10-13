@@ -28,6 +28,12 @@
       "type": "integer",
       "required": true,
       "default": 6
+    },
+    "class": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class.class",
+      "inversedBy": "lessons"
     }
   }
 }
