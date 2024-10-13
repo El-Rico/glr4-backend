@@ -5,15 +5,7 @@ export default {
     const currentYear = date.getFullYear();
     if (!event.params.data.trigger) console.log("no trigger set");
 
-    console.log("currentMonth: ", currentMonth);
-    console.log("currentYear: ", currentYear);
-
-    console.log(event.params.data);
-
     const newDays = new Date(currentYear, currentMonth + 1, 1 + 1, 0, 0);
-    console.log("newDays: ", newDays);
-    console.log("newDays.getMonth(): ", newDays.getMonth());
-    console.log("newDays.getFullYear(): ", newDays.getFullYear());
 
     while (
       newDays.getMonth() === currentMonth + 1 &&
