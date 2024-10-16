@@ -65,10 +65,6 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "username"
-    },
     "firstname": {
       "type": "string"
     },
@@ -84,6 +80,10 @@
       "relation": "manyToMany",
       "target": "api::lesson.lesson",
       "mappedBy": "users_permissions_users"
+    },
+    "credit": {
+      "type": "integer",
+      "default": 0
     }
   }
 }
