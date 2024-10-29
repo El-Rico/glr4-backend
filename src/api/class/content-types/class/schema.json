@@ -17,8 +17,9 @@
     },
     "users_permissions_users": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "plugin::users-permissions.user"
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "classes"
     },
     "lessons": {
       "type": "relation",

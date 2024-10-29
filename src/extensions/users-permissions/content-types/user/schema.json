@@ -84,6 +84,26 @@
     "credit": {
       "type": "integer",
       "default": 0
+    },
+    "acceptedterms": {
+      "type": "boolean",
+      "default": false
+    },
+    "classes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::class.class",
+      "inversedBy": "users_permissions_users"
+    },
+    "occupation": {
+      "type": "enumeration",
+      "enum": [
+        "full",
+        "even",
+        "odd"
+      ],
+      "default": "full",
+      "required": true
     }
   }
 }
