@@ -446,6 +446,7 @@ export interface ApiLessonLesson extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
+    cancelled: Attribute.Boolean & Attribute.DefaultTo<false>;
     capacity: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<6>;
     class: Attribute.Relation<
       'api::lesson.lesson',
