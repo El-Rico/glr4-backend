@@ -481,6 +481,7 @@ export interface ApiLessonLesson extends Schema.CollectionType {
 export interface ApiPagePage extends Schema.CollectionType {
   collectionName: 'pages';
   info: {
+    description: '';
     displayName: 'Page';
     pluralName: 'pages';
     singularName: 'page';
@@ -497,7 +498,7 @@ export interface ApiPagePage extends Schema.CollectionType {
     metaImage: Attribute.Media<'images'>;
     metaTitle: Attribute.String;
     publishedAt: Attribute.DateTime;
-    slug: Attribute.UID<'api::page.page', 'title'> & Attribute.Required;
+    slug: Attribute.UID<'api::page.page', 'title'>;
     title: Attribute.String;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
