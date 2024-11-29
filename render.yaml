@@ -39,7 +39,7 @@ services:
     plan: free
     # Update the following line with your Remix GitHub repo
     repo: https://github.com/El-Rico/glr4-frontend
-    branch: step-5
+    branch: 20241129b
     buildCommand: npm install && npm run build
     startCommand: npm start
     envVars:
