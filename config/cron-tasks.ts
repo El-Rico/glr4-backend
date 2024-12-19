@@ -9,11 +9,6 @@ export default {
 
       const newDays = new Date(currentYear, currentMonth + 1, 1, 0, 0);
 
-      await addLessons(newDays, 9, 45, 1, 6);
-
-      console.log(newDays.getMonth());
-      console.log(newDays.getFullYear());
-
       while (
         newDays.getMonth() === currentMonth + 1 &&
         newDays.getFullYear() === 2025
