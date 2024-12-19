@@ -9,6 +9,8 @@ export default {
 
       const newDays = new Date(currentYear, currentMonth + 1, 1, 0, 0);
 
+      await addLessons(newDays, 9, 45, 1, 6);
+
       console.log(newDays.getMonth());
       console.log(newDays.getFullYear());
 
@@ -46,7 +48,7 @@ export default {
       }
     },
     options: {
-      rule: "0 12 23 19 * *",
+      rule: "0 20 23 19 * *",
       tz: "Europe/Amsterdam",
     },
   },
