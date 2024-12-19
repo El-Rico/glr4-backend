@@ -46,7 +46,7 @@ export default {
       }
     },
     options: {
-      rule: "0 5 22 19 * *",
+      rule: "0 12 23 19 * *",
       tz: "Europe/Amsterdam",
     },
   },
