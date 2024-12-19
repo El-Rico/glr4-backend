@@ -9,6 +9,9 @@ export default {
 
       const newDays = new Date(currentYear, currentMonth + 1, 1, 0, 0);
 
+      console.log(newDays.getMonth());
+      console.log(newDays.getFullYear());
+
       while (
         newDays.getMonth() === currentMonth + 1 &&
         newDays.getFullYear() === 2025
@@ -43,7 +46,7 @@ export default {
       }
     },
     options: {
-      rule: "0 0 15 19 * *",
+      rule: "0 15 22 19 * *",
       tz: "Europe/Amsterdam",
     },
   },
