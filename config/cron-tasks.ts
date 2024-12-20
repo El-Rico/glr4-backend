@@ -9,6 +9,7 @@ export default {
 
       const newDays = new Date(currentYear, currentMonth + 1, 1, 0, 0);
 
+      console.log(newDays.getMonth());
       console.log(newDays.getFullYear());
 
       while (
