@@ -46,7 +46,7 @@ export default {
       }
     },
     options: {
-      rule: "* * * * *",
+      rule: "*/1 * * * *",
       tz: "Europe/Amsterdam",
     },
   },
