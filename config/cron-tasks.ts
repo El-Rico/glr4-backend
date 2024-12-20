@@ -10,10 +10,12 @@ export default {
       const newDays = new Date(currentYear, currentMonth + 1, 1, 0, 0);
 
       console.log("newd month: ", newDays.getMonth());
+      console.log("currentmonth + 1", currentMonth + 1);
       console.log("newd year: ", newDays.getFullYear());
 
       while (
-        newDays.getMonth() === currentMonth + 1 &&
+        // newDays.getMonth() === currentMonth + 1 &&
+        newDays.getMonth() === 0 &&
         newDays.getFullYear() === 2025
       ) {
         // MAANDAG
@@ -46,7 +48,7 @@ export default {
       }
     },
     options: {
-      rule: "*/1 * * * *",
+      rule: "0 16 20 * *",
       tz: "Europe/Amsterdam",
     },
   },
