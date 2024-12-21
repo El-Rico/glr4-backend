@@ -5,14 +5,14 @@ export default async function addLessons(
   timeHour,
   timeMinutes,
   classId,
-  capacity,
+  capacity
 ) {
   const date = new Date(
     newDays.getFullYear(),
     newDays.getMonth(),
     newDays.getDate(),
     timeHour,
-    timeMinutes,
+    timeMinutes
   );
 
   const weekNumber = moment(date, "MM-DD-YYYY").week();
@@ -23,12 +23,12 @@ export default async function addLessons(
     classId,
     {
       populate: { users_permissions_users: true },
-    },
+    }
   );
 
   // Filter alle cursisten die niet elke week komen
   const filteredClassData = classData.users_permissions_users.filter(
-    (user) => user.occupation !== filterEvenOdd,
+    (user) => user.occupation !== filterEvenOdd
   );
 
   let userIds = [];
