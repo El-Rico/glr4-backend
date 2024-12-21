@@ -43,7 +43,7 @@ export default {
       }
     },
     options: {
-      rule: "3 22 21 * *",
+      rule: "15 21 21 * *",
     },
   },
 };
