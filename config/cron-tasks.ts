@@ -7,6 +7,8 @@ export default {
       const currentMonth = date.getMonth();
       const currentYear = date.getFullYear();
 
+      console.log("Cron job started");
+
       const newDays = new Date(currentYear, currentMonth + 1, 1, 0, 0);
 
       while (
@@ -41,9 +43,12 @@ export default {
 
         newDays.setDate(newDays.getDate() + 1);
       }
+
+      console.log("Cron job ended");
     },
     options: {
-      rule: "15 21 21 * *",
+      rule: "24 22 21 * *",
+      tz: "Europe/Amsterdam",
     },
   },
 };
