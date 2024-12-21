@@ -12,8 +12,7 @@ export default {
       const newDays = new Date(currentYear, currentMonth + 1, 1, 0, 0);
 
       while (
-        // newDays.getMonth() === currentMonth + 1 &&
-        newDays.getMonth() === 0 &&
+        newDays.getMonth() === currentMonth + 1 &&
         newDays.getFullYear() === 2025
       ) {
         // MAANDAG
@@ -48,7 +47,7 @@ export default {
       console.log("Cron job finished");
     },
     options: {
-      rule: "37 22 21 * *",
+      rule: "0 2 1 * *",
       tz: "Europe/Amsterdam",
     },
   },
