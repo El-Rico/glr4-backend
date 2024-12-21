@@ -45,10 +45,11 @@ export default {
         newDays.setDate(newDays.getDate() + 1);
       }
 
-      console.log("Cron job ended");
+      console.log("Cron job finished");
     },
     options: {
-      rule: "30 21 21 * *",
+      rule: "37 22 21 * *",
+      tz: "Europe/Amsterdam",
     },
   },
 };
