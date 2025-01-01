@@ -11,6 +11,10 @@ export default {
 
       const newDays = new Date(currentYear, currentMonth + 1, 1, 0, 0);
 
+      console.log("newDays.getMonth(): ", newDays.getMonth());
+      console.log("currentMonth + 1: ", currentMonth + 1);
+      console.log("newDays.getFullYear(): ", newDays.getFullYear());
+
       while (
         newDays.getMonth() === currentMonth + 1 &&
         newDays.getFullYear() === 2025
@@ -47,7 +51,7 @@ export default {
       console.log("Cron job finished");
     },
     options: {
-      rule: "0 2 1 * *",
+      rule: "0 6 1 * *",
       tz: "Europe/Amsterdam",
     },
   },
