@@ -32,7 +32,7 @@ export default {
         // DONDERDAG
         if (newDays.getDay() === 4) {
           await addLessons(newDays, 9, 30, 5, 6);
-          await addLessons(newDays, 12, 30, 6, 7);
+          await addLessons(newDays, 12, 30, 6, 7); // Les met Barney
           await addLessons(newDays, 19, 0, 7, 6);
         }
         // VRIJDAG
