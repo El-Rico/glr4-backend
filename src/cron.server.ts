@@ -18,13 +18,10 @@ export default async function addLessons(
   const weekNumber = moment(date, "MM-DD-YYYY").week();
   const filterEvenOdd = weekNumber % 2 === 0 ? "odd" : "even";
 
-  const classData = await strapi.entityService.findOne(
-    "api::class.class",
-    classId,
-    {
-      populate: { users_permissions_users: true },
-    }
-  );
+  const classData = await strapi.documents("api::class.class").findOne({
+    documentId: "__TODO__",
+    populate: { users_permissions_users: true }
+  });
 
   // Filter alle cursisten die niet elke week komen
   const filteredClassData = classData.users_permissions_users.filter(
@@ -34,7 +31,7 @@ export default async function addLessons(
   let userIds = [];
   filteredClassData.map((user) => userIds.push(user.id));
 
-  const entry = await strapi.entityService.create("api::lesson.lesson", {
+  const entry = await strapi.documents("api::lesson.lesson").create({
     data: {
       date: date.toISOString(),
       capacity: capacity,
