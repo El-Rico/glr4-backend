@@ -19,8 +19,8 @@ export default async function addLessons(
   const filterEvenOdd = weekNumber % 2 === 0 ? "odd" : "even";
 
   const classData = await strapi.documents("api::class.class").findOne({
-    documentId: "__TODO__",
-    populate: { users_permissions_users: true }
+    documentId: "ln1gkzs6ojl9d707xn6v86swssmw",
+    populate: { users_permissions_users: true },
   });
 
   // Filter alle cursisten die niet elke week komen
