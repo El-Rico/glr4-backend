@@ -54,7 +54,7 @@ export default {
       console.log("CRON JOB FINISHED");
     },
     options: {
-      rule: "0 9 1 * *",
+      rule: "10 9 1 * *",
       tz: "Europe/Amsterdam",
     },
   },
