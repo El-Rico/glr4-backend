@@ -11,7 +11,7 @@ export default async function addLessons(
     newDays.getFullYear(),
     newDays.getMonth(),
     newDays.getDate(),
-    timeHour,
+    timeHour - 1,
     timeMinutes
   );
 
