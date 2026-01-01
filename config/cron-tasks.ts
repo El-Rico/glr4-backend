@@ -51,7 +51,7 @@ export default {
       console.log("CRON JOB FINISHED");
     },
     options: {
-      rule: "20 21 1 * *", // At 21:20 on day-of-month 1 // Server time een uur vroeger
+      rule: "35 22 1 * *", // At 22:35 on day-of-month 1 // Server time een uur vroeger
       tz: "Europe/Amsterdam",
     },
   },
