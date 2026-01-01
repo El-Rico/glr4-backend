@@ -51,7 +51,7 @@ export default {
       console.log("CRON JOB FINISHED");
     },
     options: {
-      rule: "0 22 1 * *", // At 22:00 on day-of-month 1
+      rule: "10 22 1 * *", // At 22:00 on day-of-month 1
       tz: "Europe/Amsterdam",
     },
   },
