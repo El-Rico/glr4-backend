@@ -3,24 +3,21 @@ import addLessons from "../src/cron.server";
 export default {
   myJob: {
     task: async ({ strapi }) => {
-      //   const date = new Date();
-      //   const currentMonth = date.getMonth();
-      //   const currentYear = date.getFullYear();
+      const date = new Date();
+      const currentMonth = date.getMonth();
+      const currentYear = date.getFullYear();
 
       console.log("CRON JOB STARTED");
 
-      //   const newDays = new Date(currentYear, currentMonth + 1, 1, 0, 0);
-      const newDays = new Date(2026, 0, 1, 0, 0);
+      const newDays = new Date(currentYear, currentMonth + 1, 1, 0, 0);
 
-      console.log("newDays.getMonth(): ", newDays.getMonth());
+      //   console.log("newDays.getMonth(): ", newDays.getMonth());
       //   console.log("currentMonth + 1: ", currentMonth + 1);
-      console.log("newDays.getFullYear(): ", newDays.getFullYear());
+      //   console.log("newDays.getFullYear(): ", newDays.getFullYear());
 
       while (
-        // newDays.getMonth() === currentMonth + 1 &&
-        // newDays.getFullYear() === 2025
-        newDays.getMonth() === 0 &&
-        newDays.getFullYear() === 2026
+        newDays.getMonth() === currentMonth + 1 &&
+        newDays.getFullYear() === currentYear
       ) {
         // MAANDAG
         if (newDays.getDay() === 1) {
@@ -54,7 +51,7 @@ export default {
       console.log("CRON JOB FINISHED");
     },
     options: {
-      rule: "10 9 1 * *",
+      rule: "0 22 1 * *", // At 22:00 on day-of-month 1
       tz: "Europe/Amsterdam",
     },
   },
