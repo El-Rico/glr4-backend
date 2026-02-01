@@ -21,28 +21,28 @@ export default {
       ) {
         // MAANDAG
         if (newDays.getDay() === 1) {
-          await addLessons(newDays, 9, 30, 1, 6); // Date, hour, minutes, classId, capacity
-          await addLessons(newDays, 12, 30, 2, 6);
-          await addLessons(newDays, 19, 0, 3, 6);
+          await addLessons(strapi, newDays, 9, 30, 1, 6); // Date, hour, minutes, classId, capacity
+          await addLessons(strapi, newDays, 12, 30, 2, 6);
+          await addLessons(strapi, newDays, 19, 0, 3, 6);
         }
         // DINSDAG
         if (newDays.getDay() === 2) {
-          await addLessons(newDays, 19, 0, 4, 6);
+          await addLessons(strapi, newDays, 19, 0, 4, 6);
         }
         // DONDERDAG
         if (newDays.getDay() === 4) {
-          await addLessons(newDays, 9, 30, 5, 6);
-          await addLessons(newDays, 12, 30, 6, 7); // Les met Barney
-          await addLessons(newDays, 19, 0, 7, 6);
+          await addLessons(strapi, newDays, 9, 30, 5, 6);
+          await addLessons(strapi, newDays, 12, 30, 6, 7); // Les met Barney
+          await addLessons(strapi, newDays, 19, 0, 7, 6);
         }
         // VRIJDAG
         if (newDays.getDay() === 5) {
-          await addLessons(newDays, 9, 30, 8, 6);
-          await addLessons(newDays, 12, 30, 9, 6);
+          await addLessons(strapi, newDays, 9, 30, 8, 6);
+          await addLessons(strapi, newDays, 12, 30, 9, 6);
         }
         // ZATERDAG
         if (newDays.getDay() === 6) {
-          await addLessons(newDays, 10, 0, 10, 6);
+          await addLessons(strapi, newDays, 10, 0, 10, 6);
         }
 
         newDays.setDate(newDays.getDate() + 1);
@@ -51,7 +51,7 @@ export default {
       console.log("CRON JOB FINISHED");
     },
     options: {
-      rule: "46 13 1 * *", // At 13:46 on day-of-month 1
+      rule: "0 13 1 * *", // At 13:00 on day-of-month 1
       //   tz: "Europe/Amsterdam",
     },
   },

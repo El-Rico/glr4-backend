@@ -1,6 +1,7 @@
 import moment from "moment";
 
 export default async function addLessons(
+  strapi,
   newDays,
   timeHour,
   timeMinutes,
