@@ -51,8 +51,8 @@ export default {
       console.log("CRON JOB FINISHED");
     },
     options: {
-      rule: "25 13 1 * *", // At 13:25 on day-of-month 1
-      tz: "Europe/Amsterdam",
+      rule: "46 13 1 * *", // At 13:46 on day-of-month 1
+      //   tz: "Europe/Amsterdam",
     },
   },
 };
