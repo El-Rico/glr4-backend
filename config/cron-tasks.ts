@@ -11,9 +11,9 @@ export default {
 
       const newDays = new Date(currentYear, currentMonth + 1, 1, 0, 0);
 
-      //   console.log("newDays.getMonth(): ", newDays.getMonth());
-      //   console.log("currentMonth + 1: ", currentMonth + 1);
-      //   console.log("newDays.getFullYear(): ", newDays.getFullYear());
+      console.log("newDays.getMonth(): ", newDays.getMonth());
+      console.log("currentMonth + 1: ", currentMonth + 1);
+      console.log("newDays.getFullYear(): ", newDays.getFullYear());
 
       while (
         newDays.getMonth() === currentMonth + 1 &&
@@ -51,7 +51,7 @@ export default {
       console.log("CRON JOB FINISHED");
     },
     options: {
-      rule: "16 13 1 * *", // At 13:16 on day-of-month 1
+      rule: "25 13 1 * *", // At 13:25 on day-of-month 1
       tz: "Europe/Amsterdam",
     },
   },
